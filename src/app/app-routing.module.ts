@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'show',
+    loadChildren: () => import('./show/show.module').then( m => m.ShowPageModule)
+  },
+  {
+    path: 'show',
+    loadChildren: () => import('./show/show.module').then( m => m.ShowPageModule)
+  },
+  {
+    path: 'edit',
+    loadChildren: () => import('./edit/edit.module').then( m => m.EditPageModule)
+  },
 ];
 
 @NgModule({
